@@ -1,3 +1,12 @@
+:root {
+    --stopsign-width: 1200px;
+    --stopsign-height: 1200px;
+
+    --img-base-height: 500px;
+    --img-base-width: 250px;
+}
+
+
 body {
   background-color: #2596be;
 }
@@ -5,8 +14,8 @@ body {
 
 .stop-sign {
   position: relative;
-  width: 800px;
-  height: 800px;
+  width: var(--stopsign-width);
+  height: var(--stopsign-height);
   margin: auto;
   border: 1px solid lightgray;
 }
@@ -14,18 +23,20 @@ body {
 .oct-img {
   background: red;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: calc(var(--img-base-width) * var(--img-scale, 1));
+  height: calc(var(--img-base-height) * var(--img-scale, 1));
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
 }
 
-.oct-img:nth-child(1) {transform: translate(-50%, -50%) rotate(0deg) translate(300px) rotate(-0deg);}
-.oct-img:nth-child(2) {transform: rotate(45deg) translate(300px) rotate(-45deg);}
-.oct-img:nth-child(3) {transform: rotate(90deg) translate(300px) rotate(-90deg);}
-.oct-img:nth-child(4) {transform: rotate(135deg) translate(300px) rotate(-135deg);}
-.oct-img:nth-child(5) {transform: rotate(180deg) translate(300px) rotate(-180deg);}
-.oct-img:nth-child(6) {transform: rotate(225deg) translate(300px) rotate(-225deg);}
-.oct-img:nth-child(7) {transform: rotate(270deg) translate(300px) rotate(-270deg);}
-.oct-img:nth-child(8) {transform: rotate(315deg) translate(300px) rotate(-315deg);}
+.oct-img:nth-child(1) { --img-scale: .6; transform: translate(-50%, -50%) rotate(0deg) translate(500px) rotate(-0deg);} /* East */ 
+.oct-img:nth-child(2) { --img-scale: .75; transform: translate(-30%, -30%) rotate(45deg) translate(350px) rotate(-45deg);} /* SouthEast */
+.oct-img:nth-child(3) { --img-scale: 1; transform: translate(-50%, -50%) rotate(90deg) translate(250px) rotate(-90deg);} /* South */
+.oct-img:nth-child(4) { --img-scale: .75; transform: translate(-70%, -30%) rotate(135deg) translate(350px) rotate(-135deg);} /* South West */
+.oct-img:nth-child(5) { --img-scale: .6; transform: translate(-50%, -50%) rotate(180deg) translate(500px) rotate(-180deg);} /* West */
+.oct-img:nth-child(6) { --img-scale: .4; transform: translate(-50%, -50%) rotate(225deg) translate(500px) rotate(-225deg); } /* North West */
+.oct-img:nth-child(7) { --img-scale: .3; transform: translate(-50%, -50%) rotate(270deg) translate(250px) rotate(-270deg);} /* North */
+.oct-img:nth-child(8) { --img-scale: .4; transform: translate(-50%, -50%) rotate(315deg) translate(500px) rotate(-315deg);} /* North East */
 
