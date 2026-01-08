@@ -1,0 +1,31 @@
+body {
+  background-color: #2596be;
+}
+
+
+.stop-sign {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  border: 1px solid lightgray;
+}
+
+.oct-img {
+  background: red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+}
+
+.oct-img:nth-child(1) {transform: translate(-50%, -50%) rotate(0deg) translate(300px) rotate(-0deg);}
+.oct-img:nth-child(2) {transform: rotate(45deg) translate(300px) rotate(-45deg);}
+.oct-img:nth-child(3) {transform: rotate(90deg) translate(300px) rotate(-90deg);}
+.oct-img:nth-child(4) {transform: rotate(135deg) translate(300px) rotate(-135deg);}
+.oct-img:nth-child(5) {transform: rotate(180deg) translate(300px) rotate(-180deg);}
+.oct-img:nth-child(6) {transform: rotate(225deg) translate(300px) rotate(-225deg);}
+.oct-img:nth-child(7) {transform: rotate(270deg) translate(300px) rotate(-270deg);}
+.oct-img:nth-child(8) {transform: rotate(315deg) translate(300px) rotate(-315deg);}
+

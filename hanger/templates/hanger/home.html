@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <link rel="stylesheet" href="{% static 'hanger/styles.css' %}">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home</title>
+</head>
+<body>
+
+  <div class="stop-sign">
+    <img id="firstGroupPicture" src="" alt="Image" class="oct-img">
+    <img id="secondGroupPicture" src="" alt="Image" class="oct-img">
+    <img id="thirdGroupPicture" src="" alt="Image" class="oct-img">
+    <img id="fourthGroupPicture" src="" alt="Image"  class="oct-img">
+    <img id="fifthGroupPicture" src="" alt="Image"  class="oct-img">
+    <img id="sixthGroupPicture" src="" alt="Image"  class="oct-img">
+    <img id="seventhGroupPicture" src="" alt="Image"  class="oct-img">
+    <img id="eighthGroupPicture" src="" alt="Image"  class="oct-img">
+  </div>
+
+  <button onclick="spinGroupLeft()">Group Left</button>
+  <button onclick="spinGroupRight()">Group Right</button>
+
+  <button onclick="scrollThirdGroupLeft()">Image Left</button>
+  <button onclick="scrollThirdGroupRight()">Image Right</button>
+</body>
+<script src="{% static 'hanger/myfirst.js'%}"></script>
+</html>
